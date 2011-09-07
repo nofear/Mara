@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="ConstraintSolver.Interval.FltDomain" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Interval\Flt\FltDomain.cs</FileName>
+      <HashCode>AAJAAAAACZAAADEE8IcnAAAARgQQAKIEAAAkAQBQAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="m_IntervalList" />
+    </ShowAsCollectionAssociation>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ConstraintSolver.Interval.FltDomain.SimpleIntervalEnumerator" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Interval\Flt\FltDomain.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ConstraintSolver.Interval.FltInterval">
+    <Position X="6.5" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Interval\Flt\FltInterval.cs</FileName>
+      <HashCode>EAJCAEYAARgAIAAk8A8HRAAIRByQBIYAAAAkIQCQAiA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ConstraintSolver.Interval.FltInterval.Comparer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Interval\Flt\FltInterval.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConstraintSolver.Interval.IntDomain" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Interval\Int\IntDomain.cs</FileName>
+      <HashCode>gANAEAgEKZAABDFk8ocHAAIARgQQJYIUAAAtAQBSAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ConstraintSolver.Interval.IntDomain.BitArrayIntervalEnumerator" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Interval\Int\IntDomain.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="ConstraintSolver.Interval.IntDomain.SimpleIntervalEnumerator" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Interval\Int\IntDomain.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ConstraintSolver.Integer.IntVar">
+    <Position X="0.5" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>Integer\IntBase\IntVar.cs</FileName>
+      <HashCode>AAVACQAAABAAAhAE8AWEAgAAQgAAAIAEAKAgBQAAJyA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_Domain" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ConstraintSolver.Integer.IntVar.ValueEnumerator" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Integer\IntBase\IntVar.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConstraintSolver.Integer.IntVarList">
+    <Position X="9.75" Y="4" Width="2" />
+    <TypeIdentifier>
+      <FileName>Integer\IntBase\IntVarList.cs</FileName>
+      <HashCode>AQEAUAAAABAAAAAAGAAAAAAAAgCAAAAAIIAAAUBAgAQ=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="ConstraintSolver.Float.FltVar">
+    <Position X="6.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>Float\FltBase\FltVar.cs</FileName>
+      <HashCode>AAVCAAAAABAAAgAE8AWEAgAAQgAAAIAAAIggBQAAJyA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_Domain" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="ConstraintSolver.Float.FltVarList">
+    <Position X="12.75" Y="4" Width="2" />
+    <TypeIdentifier>
+      <FileName>Float\FltBase\FltVarList.cs</FileName>
+      <HashCode>AQEAEAAAABAAAAAAGAAAAAAAAgCAAAAAIIAAAQBAgAQ=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="ConstraintSolver.VariableList">
+    <Position X="11.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Variable\VariableList.cs</FileName>
+      <HashCode>EEIAAEIAEgAAABAUCAAABAQAQAQAAAAECAEAAIBQIAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ConstraintSolver.VariableList.ComparerCons" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Variable\VariableList.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConstraintSolver.Variable">
+    <Position X="3.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Variable\Variable.cs</FileName>
+      <HashCode>EAFAIAYQEoAAAACEBAACUgYARAQAAAAAgIEAAAEgAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="ConstraintSolver.Interval.IntInterval">
+    <Position X="0.5" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Interval\Int\IntInterval.cs</FileName>
+      <HashCode>EAJAAEYAARgAIAAk8A8HRAAIRASQBIYAAAAkIQCQAiA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ConstraintSolver.Interval.IntInterval.Integer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Interval\Int\IntInterval.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ConstraintSolver.Interval.IntInterval.Comparer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Interval\Int\IntInterval.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <Lollipop Position="0.2" />
+  </Class>
+</ClassDiagram>

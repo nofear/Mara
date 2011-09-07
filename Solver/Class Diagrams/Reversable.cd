@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MaraSolver.Reversible.StateStack">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Reversable\StateStack.cs</FileName>
+      <HashCode>AAIAAGAAQEAAAAAAAAACAAQAAACAEAAAAEAAAQAACBA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="MaraSolver.Reversible.StateStack.StateMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Reversable\StateStack.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MaraSolver.Reversible.RevObject&lt;T&gt;" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Reversable\RevObject.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAQAAAAAAAAgAAAABAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Reversible.RevValue&lt;T&gt;" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Reversable\RevValue.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAgBAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Reversible.RevList&lt;T&gt;" Collapsed="true">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Reversable\RevList.cs</FileName>
+      <HashCode>AEIAAEAAAAAAABAQCAAEBAQCBAAAAAAECAAABABQIAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MaraSolver.Reversible.StateId" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Reversable\StateId.cs</FileName>
+      <HashCode>AAAAEAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Reversible.RevBase" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Reversable\RevBase.cs</FileName>
+      <HashCode>AAAAAAAgQAAAAAAAAAAAAAAAAAAAAAAAAEAABQCAAAg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="MaraSolver.Reversible.IStateStack" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Reversable\IStateStack.cs</FileName>
+      <HashCode>AAIAAEAAQAAAAAAAAAAAAAAAAAAAEAAAAEAAAQAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MaraSolver.Reversible.IState" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Reversable\IState.cs</FileName>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

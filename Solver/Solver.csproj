@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99024DE0-7051-47FE-BFE9-B114EF4B0B12}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Solver</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MaraSolver</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;rop</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraint\Constraint.cs" />
+    <Compile Include="Constraint\ConstraintVar.cs" />
+    <Compile Include="Constraint\ConstraintMeta.cs" />
+    <Compile Include="Constraint\ConstraintVarExpr.cs" />
+    <Compile Include="Constraint\ConstraintVarList2.cs" />
+    <Compile Include="Constraint\IDemon.cs" />
+    <Compile Include="Float\FltBase\FltVarMatrix.cs" />
+    <Compile Include="Float\FltCons\FltVarLog.cs" />
+    <Compile Include="Float\FltCons\FltVarPow.cs" />
+    <Compile Include="Float\FltExprVal\FltVarExprVal.cs" />
+    <Compile Include="Float\FltExprVal\FltVarExprValAdd.cs" />
+    <Compile Include="Float\FltExprVal\FltVarExprValAddRev.cs" />
+    <Compile Include="Float\FltExprVal\FltVarExprValDiv.cs" />
+    <Compile Include="Float\FltExprVal\FltVarExprValDivRev.cs" />
+    <Compile Include="Float\FltExprVal\FltVarExprValMul.cs" />
+    <Compile Include="Float\FltExprVal\FltVarExprValMulRev.cs" />
+    <Compile Include="Float\FltExprVal\FltVarExprValSub.cs" />
+    <Compile Include="Float\FltExprVal\FltVarExprValSubRev.cs" />
+    <Compile Include="Float\FltExpr\FltVarExpr.cs" />
+    <Compile Include="Float\FltSearch\FltGenerate.cs" />
+    <Compile Include="Float\FltSearch\FltSearch.cs" />
+    <Compile Include="Float\FltSearch\FltSearchDichotomize.cs" />
+    <Compile Include="Float\FltSearch\FltSearchInstantiate.cs" />
+    <Compile Include="Float\FltSearch\FltSearchInstantiateBest.cs" />
+    <Compile Include="Float\FltSearch\FltVarSelector.cs" />
+    <Compile Include="Float\FltSearch\FltVarValueSelector.cs" />
+    <Compile Include="Float\FltCons\FltVarExp.cs" />
+    <Compile Include="Float\FltCons\FltVarNeg.cs" />
+    <Compile Include="Float\FltTrig\FltVarSin.cs" />
+    <Compile Include="Integer\IntExprVal\IntVarExprVal.cs" />
+    <Compile Include="Integer\IntExprVal\IntVarExprValAdd.cs" />
+    <Compile Include="Integer\IntExprVal\IntVarExprValAddRev.cs" />
+    <Compile Include="Integer\IntExprVal\IntVarExprValDiv.cs" />
+    <Compile Include="Integer\IntExprVal\IntVarExprValDivRev.cs" />
+    <Compile Include="Integer\IntExprVal\IntVarExprValMul.cs" />
+    <Compile Include="Integer\IntExprVal\IntVarExprValMulRev.cs" />
+    <Compile Include="Integer\IntExprVal\IntVarExprValSub.cs" />
+    <Compile Include="Integer\IntExprVal\IntVarExprValSubRev.cs" />
+    <Compile Include="Integer\IntExpr\IntVarExpr.cs" />
+    <Compile Include="Integer\IntCmp\IntVarCmpLessEqualOffset.cs" />
+    <Compile Include="Integer\IntCons\IntDomainListIndex.cs" />
+    <Compile Include="Integer\IntSearch\IntGenerateImpact.cs" />
+    <Compile Include="Integer\IntSearch\IntSearchInstantiateBest.cs" />
+    <Compile Include="Integer\IntSearch\IntSearch.cs" />
+    <Compile Include="Integer\IntSearch\IntVarSelector.cs" />
+    <Compile Include="Integer\IntSearch\IntVarValueSelector.cs" />
+    <Compile Include="Integer\IntCons\IntVarListDotProduct.cs" />
+    <Compile Include="Integer\IntCons\IntVarListSumConstant.cs" />
+    <Compile Include="Integer\IntCons\IntVarNeg.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="Reversable\IStateStack.cs" />
+    <Compile Include="Solver\GoalDelegate.cs" />
+    <Compile Include="Solver\GoalPrintVar.cs" />
+    <Compile Include="Solver\IntObjective.cs" />
+    <Compile Include="Solver\IPropagationQueue.cs" />
+    <Compile Include="Solver\Problem.cs" />
+    <Compile Include="Solver\PropagationQueueCons.cs" />
+    <Compile Include="Solver\Solution.cs" />
+    <Compile Include="Solver\Solver.cs" />
+    <Compile Include="Solver\SolverBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraint\ConstraintVar0.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraint\ConstraintVar1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraint\ConstraintVar2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraint\ConstraintVarList0.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constraint\ConstraintVarList1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reversable\RevList.cs" />
+    <Compile Include="Reversable\RevValue.cs" />
+    <Compile Include="Reversable\RevBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\QueueEx.cs" />
+    <Compile Include="Utility\StackEx.cs" />
+    <Compile Include="Variable\Variable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Variable\VariableList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Solver\Goal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Solver\GoalAnd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Solver\GoalOr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Solver\GoalStack.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCons\FltVarListIndex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCons\FltVarListMax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCons\FltVarListMin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCons\FltVarListMul.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCons\FltVarListSum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltBase\FltVar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltBase\FltVarList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCmp\FltVarCmp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCmp\FltVarCmpEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCmp\FltVarCmpEqualIntVar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCmp\FltVarCmpLess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCmp\FltVarCmpLessEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCmp\FltVarCmpNotEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCmpVal\FltVarCmpVal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCmpVal\FltVarCmpValEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCmpVal\FltVarCmpValGreater.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCmpVal\FltVarCmpValGreaterEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCmpVal\FltVarCmpValLess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCmpVal\FltVarCmpValLessEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltCmpVal\FltVarCmpValNotEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltExpr\FltVarExprVar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltExpr\FltVarExprVarAdd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltExpr\FltVarExprVarDiv.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltExpr\FltVarExprVarMul.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Float\FltExpr\FltVarExprVarSub.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reversable\RevObject.cs" />
+    <Compile Include="Solver\PropagationQueueVar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reversable\StateStack.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCons\IntVarListAllDifferent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCons\IntVarListIndex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCons\IntVarListMax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCons\IntVarListMin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCons\IntVarListMul.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCons\IntVarListSum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntBase\IntVar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntBase\IntVarList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntBase\IntVarMatrix.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCmp\IntVarCmp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCmp\IntVarCmpEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCmp\IntVarCmpLess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCmp\IntVarCmpLessEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCmp\IntVarCmpNotEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCmpVal\IntVarCmpVal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCmpVal\IntVarCmpValEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCmpVal\IntVarCmpValGreater.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCmpVal\IntVarCmpValGreaterEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCmpVal\IntVarCmpValLess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCmpVal\IntVarCmpValLessEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntCmpVal\IntVarCmpValNotEqual.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntExpr\IntVarExprVar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntExpr\IntVarExprVarAdd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntExpr\IntVarExprVarDiv.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntExpr\IntVarExprVarMul.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntExpr\IntVarExprVarSub.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntSearch\IntSearchDichotomize.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntSearch\IntGenerate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Integer\IntSearch\IntSearchInstantiate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reversable\IState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Class Diagrams\Constraint.cd">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="Class Diagrams\Float\FltVarCmpVal.cd" />
+    <None Include="Class Diagrams\Float\FltVarCmp.cd" />
+    <None Include="Class Diagrams\Float\FltVarExpr.cd" />
+    <None Include="Class Diagrams\Float\FltSearch.cd" />
+    <None Include="Class Diagrams\Integer\IntVarCmpVal.cd" />
+    <None Include="Class Diagrams\Integer\IntVarCmp.cd" />
+    <None Include="Class Diagrams\Integer\IntVarExpr.cd" />
+    <None Include="Class Diagrams\IntVarExprVal.cd" />
+    <None Include="Class Diagrams\Integer\IntSearch.cd" />
+    <None Include="Class Diagrams\Reversable.cd" />
+    <None Include="Class Diagrams\Variable.cd" />
+    <None Include="Class Diagrams\Solver.cd">
+      <SubType>
+      </SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Interval\Interval.csproj">
+      <Project>{DAA6BB54-3ACD-46F1-82A0-51C8E2CC7EA2}</Project>
+      <Name>Interval</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Set\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

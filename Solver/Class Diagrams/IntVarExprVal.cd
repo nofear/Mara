@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MaraSolver.Integer.IntVarExprVal">
+    <Position X="0.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntVarExprVal\IntVarExprVal.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEYAUAAAAAAgQAAEAAAAAgAAAAIAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarExprValAdd">
+    <Position X="3" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntVarExprVal\IntVarExprValAdd.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarExprValAddRev">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntVarExprVal\IntVarExprValAddRev.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarExprValDiv">
+    <Position X="7" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntVarExprVal\IntVarExprValDiv.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarExprValDivRev">
+    <Position X="7" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntVarExprVal\IntVarExprValDivRev.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarExprValMul">
+    <Position X="9.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntVarExprVal\IntVarExprValMul.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarExprValMulRev">
+    <Position X="9.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntVarExprVal\IntVarExprValMulRev.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarExprValSub">
+    <Position X="5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntVarExprVal\IntVarExprValSub.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="MaraSolver.Integer.IntVarExprVal" ManuallyRouted="true">
+      <Path>
+        <Point X="1.25" Y="10.75" />
+        <Point X="1.25" Y="10.134" />
+        <Point X="5.75" Y="10.134" />
+        <Point X="5.75" Y="9.759" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarExprValSubRev">
+    <Position X="5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntVarExprVal\IntVarExprValSubRev.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

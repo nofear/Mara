@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MaraSolver.Solver">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Solver\Solver.cs</FileName>
+      <HashCode>wlIAABAABAAIgAAEBYEADAoIAgCAABAAwAQCgISAAVA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_GoalStack" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MaraSolver.GoalStack">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Solver\GoalStack.cs</FileName>
+      <HashCode>AgIAAAAABAAEAQQGIAAACggJCAiIAAAIKAAAAAAEaAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="m_StackAnd" />
+    </ShowAsCollectionAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="MaraSolver.GoalAnd">
+    <Position X="1" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Solver\GoalAnd.cs</FileName>
+      <HashCode>AAAAAAAAEAAAAAQEAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Goal">
+    <Position X="2.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Solver\Goal.cs</FileName>
+      <HashCode>IAIAAAAAAAAAAAQAAAAAAAgAAAAAAAAgAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Reversible.StateStack">
+    <Position X="13.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Reversable\StateStack.cs</FileName>
+      <HashCode>AAIAAGAAQEAAAAAAAAACAAQAAACAEAAAAEAAAQAACBA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="MaraSolver.Reversible.StateStack.StateMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Reversable\StateStack.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MaraSolver.Variable">
+    <Position X="9.25" Y="10.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Variable\Variable.cs</FileName>
+      <HashCode>EAFAAAQQAoAAAAAEBAACEgYIQAAABAAAgIEAAAEgAAI=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Class Name="MaraSolver.Variable.ComparerCons" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Variable\Variable.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+  </Class>
+  <Class Name="MaraSolver.VariableList">
+    <Position X="12" Y="10.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>Variable\VariableList.cs</FileName>
+      <HashCode>EEIAAEAAAgAAABAUCAAABAQAQAAAAAAECAAAAIBQIAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MaraSolver.BaseConstraint.Constraint">
+    <Position X="6.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Constraint\Constraint.cs</FileName>
+      <HashCode>AAYAAIQAAggAAAQEAAAAwAAASgIAAAABAIEAgAgAABI=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MaraSolver.PropagationQueueVar">
+    <Position X="13.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Solver\PropagationQueueVar.cs</FileName>
+      <HashCode>CFAAAMAAAAAAIAAAIAAAEAAQAAAAAAAAAAAAgAAAABA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MaraSolver.PropagationQueueCons">
+    <Position X="10" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Solver\PropagationQueueCons.cs</FileName>
+      <HashCode>CFBAAMAAAAAAIAAAIAAAEAAQAAAAAAAAAAAAgAAAABA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MaraSolver.Problem">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Solver\Problem.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="m_Solver" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MaraSolver.GoalOr">
+    <Position X="3.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Solver\GoalOr.cs</FileName>
+      <HashCode>AAAAACAAEAAAAAQEAAAAAAACAACAAAAAgAEAAAAACAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MaraSolver.Reversible.IStateStack" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Reversable\IStateStack.cs</FileName>
+      <HashCode>AAIAAEAAQAAAAAAAAAAAAAAAAAAAEAAAAEAAAQAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MaraSolver.IPropagationQueue" Collapsed="true">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Solver\IPropagationQueue.cs</FileName>
+      <HashCode>AFAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

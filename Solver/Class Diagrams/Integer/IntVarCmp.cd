@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MaraSolver.Integer.IntVarCmp">
+    <Position X="4.75" Y="2" Width="2" />
+    <TypeIdentifier>
+      <FileName>Integer\IntCmp\IntVarCmp.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.BaseConstraint.ConstraintVar1&lt;TVar0, TVar1&gt;" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Constraint\ConstraintVar1.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAACAAAAMAAAAQAAAAADAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarCmpEqual">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntCmp\IntVarCmpEqual.cs</FileName>
+      <HashCode>AAQAAAAAAgAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarCmpLess">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntCmp\IntVarCmpLess.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarCmpLessEqual">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntCmp\IntVarCmpLessEqual.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarCmpLessEqualOffset">
+    <Position X="7.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntCmp\IntVarCmpLessEqualOffset.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAIAAAAAAAgAAAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarCmpNotEqual">
+    <Position X="9.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntCmp\IntVarCmpNotEqual.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAACgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

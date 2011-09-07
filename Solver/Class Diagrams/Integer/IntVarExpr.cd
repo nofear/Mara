@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MaraSolver.Integer.IntVarExpr">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntExpr\IntVarExpr.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAE4AWAAgAAAAAAAMAAAAAAAAAAByA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarExprAdd">
+    <Position X="1" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntExpr\IntVarExprAdd.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarExprDiv">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntExpr\IntVarExprDiv.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarExprMul">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntExpr\IntVarExprMul.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.IntVarExprSub">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntExpr\IntVarExprSub.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

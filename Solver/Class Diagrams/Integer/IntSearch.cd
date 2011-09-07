@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MaraSolver.Integer.Search.IntGenerate">
+    <Position X="0.5" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>Integer\IntSearch\IntGenerate.cs</FileName>
+      <HashCode>gAAAAAAAAAAAAAQEAiAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.Search.IntVarValueSelector">
+    <Position X="13.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Integer\IntSearch\IntVarValueSelector.cs</FileName>
+      <HashCode>AAAAAAAAABAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="MaraSolver.Integer.Search.IntVarValueSelector.Select" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Integer\IntSearch\IntVarValueSelector.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+  </Class>
+  <Class Name="MaraSolver.Integer.Search.IntSearch">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Integer\IntSearch\IntSearch.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="MaraSolver.Integer.Search.IntSearch.IntSearchGoal" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Integer\IntSearch\IntSearch.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+  </Class>
+  <Class Name="MaraSolver.Integer.Search.IntSearchDichotomize">
+    <Position X="5.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Integer\IntSearch\IntSearchDichotomize.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Class Name="MaraSolver.Integer.Search.IntSearchDichotomize.IntSearchGoalDichotomize" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Integer\IntSearch\IntSearchDichotomize.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+  </Class>
+  <Class Name="MaraSolver.Integer.Search.IntSearchInstantiate">
+    <Position X="8.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Integer\IntSearch\IntSearchInstantiate.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Class Name="MaraSolver.Integer.Search.IntSearchInstantiate.IntSearchGoalInstantiate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Integer\IntSearch\IntSearchInstantiate.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+  </Class>
+  <Class Name="MaraSolver.Integer.Search.IntSearchInstantiateBest">
+    <Position X="10.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>Integer\IntSearch\IntSearchInstantiateBest.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Class Name="MaraSolver.Integer.Search.IntSearchInstantiateBest.IntSearchGoalInstantiateBest" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Integer\IntSearch\IntSearchInstantiateBest.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+  </Class>
+  <Class Name="MaraSolver.Integer.Search.IntVarSelector">
+    <Position X="13.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Integer\IntSearch\IntVarSelector.cs</FileName>
+      <HashCode>AAAAEAAAAgAAAAAgABAAAAAAAAAABEAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="MaraSolver.Integer.Search.IntVarSelector.Select" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Integer\IntSearch\IntVarSelector.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+  </Class>
+  <Class Name="MaraSolver.Goal">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Solver\Goal.cs</FileName>
+      <HashCode>IAIAAAAAAAAAAAQAAAAAAAgAAAAAAAAgAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Integer.Search.IntGenerateImpact">
+    <Position X="3.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Integer\IntSearch\IntGenerateImpact.cs</FileName>
+      <HashCode>gAAAAAAAAAAAAAQEAiAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="MaraSolver.Integer.Search.IntGenerateImpact.Impact" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Integer\IntSearch\IntGenerateImpact.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+  </Class>
+</ClassDiagram>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MaraSolver.Float.FltVarCmp">
+    <Position X="4.25" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Float\FltCmp\FltVarCmp.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarCmpEqual">
+    <Position X="1" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltCmp\FltVarCmpEqual.cs</FileName>
+      <HashCode>AAQAAAAAAgAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarCmpLess">
+    <Position X="3.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltCmp\FltVarCmpLess.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarCmpLessEqual">
+    <Position X="5.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltCmp\FltVarCmpLessEqual.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarCmpNotEqual">
+    <Position X="7.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltCmp\FltVarCmpNotEqual.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarCmpEqualIntVar">
+    <Position X="11.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltCmp\FltVarCmpEqualIntVar.cs</FileName>
+      <HashCode>AAQAAAAAwAAAAAAEAAAAAAAAEgAAAAAgAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.BaseConstraint.ConstraintVar1&lt;TVar0, TVar1&gt;" Collapsed="true">
+    <Position X="4.25" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Constraint\ConstraintVar1.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAACAAAAMAAAAQAAAAADAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

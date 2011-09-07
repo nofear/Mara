@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MaraSolver.Float.Search.FltVarValueSelector">
+    <Position X="13.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltSearch\FltVarValueSelector.cs</FileName>
+      <HashCode>AAAAAAAAABAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="MaraSolver.Float.Search.FltVarValueSelector.Select" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Float\FltSearch\FltVarValueSelector.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+  </Class>
+  <Class Name="MaraSolver.Float.Search.FltSearch">
+    <Position X="7.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Float\FltSearch\FltSearch.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="MaraSolver.Float.Search.FltSearch.FltSearchGoal" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Float\FltSearch\FltSearch.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+  </Class>
+  <Class Name="MaraSolver.Float.Search.FltSearchDichotomize">
+    <Position X="10.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Float\FltSearch\FltSearchDichotomize.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="MaraSolver.Float.Search.FltSearchDichotomize.FltSearchGoalDichotomize" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Float\FltSearch\FltSearchDichotomize.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+  </Class>
+  <Class Name="MaraSolver.Float.Search.FltSearchInstantiate">
+    <Position X="4" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltSearch\FltSearchInstantiate.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="MaraSolver.Float.Search.FltSearchInstantiate.FltSearchGoalInstantiate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Float\FltSearch\FltSearchInstantiate.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+  </Class>
+  <Class Name="MaraSolver.Float.Search.FltSearchInstantiateBest">
+    <Position X="7.25" Y="3.75" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Float\FltSearch\FltSearchInstantiateBest.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="MaraSolver.Float.Search.FltSearchInstantiateBest.FltSearchGoalInstantiateBest" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Float\FltSearch\FltSearchInstantiateBest.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+  </Class>
+  <Class Name="MaraSolver.Float.Search.FltVarSelector">
+    <Position X="13.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltSearch\FltVarSelector.cs</FileName>
+      <HashCode>AAAAEAAAAgAAAAAAABAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="MaraSolver.Float.Search.FltVarSelector.Select" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Float\FltSearch\FltVarSelector.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+  </Class>
+  <Class Name="MaraSolver.Goal">
+    <Position X="1.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Solver\Goal.cs</FileName>
+      <HashCode>IAIAAAAAAAAAAAQAAAAAAAgAAAAAAAAgAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.Search.FltGenerate">
+    <Position X="1.25" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>Float\FltSearch\FltGenerate.cs</FileName>
+      <HashCode>AAIAAAAAAAAAAAQEAiAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

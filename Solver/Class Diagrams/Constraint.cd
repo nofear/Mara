@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MaraSolver.BaseConstraint.ConstraintVarList2&lt;TVar0, TVar1, TVarList&gt;">
+    <Position X="12" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Constraint\ConstraintVarList2.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAAAAACAAAANAAAAQAAAAADAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="MaraSolver.BaseConstraint.ConstraintVar0&lt;TVar0&gt;">
+    <Position X="1" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Constraint\ConstraintVar0.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAACAAAAIAAAAQAAAAABAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="MaraSolver.BaseConstraint.ConstraintVar1&lt;TVar0, TVar1&gt;">
+    <Position X="3" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Constraint\ConstraintVar1.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAACAAAAMAAAAQAAAAADAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="MaraSolver.BaseConstraint.ConstraintVar2&lt;TVar0, TVar1, TVar2&gt;">
+    <Position X="5.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Constraint\ConstraintVar2.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAACAAAAOAAAAQAAAAAHAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="MaraSolver.BaseConstraint.ConstraintVarList0&lt;TVarList&gt;">
+    <Position X="7.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Constraint\ConstraintVarList0.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAAAAACAAAABAAAAQAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="MaraSolver.BaseConstraint.ConstraintVarList1&lt;TVar0, TVarList&gt;">
+    <Position X="9.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Constraint\ConstraintVarList1.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAIAAAAACAAAAJAAAAQAAAAABAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="MaraSolver.BaseConstraint.ConstraintVar" Collapsed="true">
+    <Position X="1" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Constraint\ConstraintVar.cs</FileName>
+      <HashCode>AAIAAAAAAgAAAQAAAAAAAAAAQAAAAAAAEAYAAAAAAEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.BaseConstraint.Constraint" Collapsed="true">
+    <Position X="1" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Constraint\Constraint.cs</FileName>
+      <HashCode>AAYAAIQAAggAAAQEAAAAwAAASgIAAAABAIEAgAgAABI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+</ClassDiagram>

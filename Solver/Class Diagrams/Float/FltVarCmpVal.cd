@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MaraSolver.Float.FltVarCmpVal">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltCmpVal\FltVarCmpVal.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.BaseConstraint.ConstraintVar0&lt;TVar0&gt;" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Constraint\ConstraintVar0.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAACAAAAIAAAAQAAAAABAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarCmpValEqual">
+    <Position X="1.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltCmpVal\FltVarCmpValEqual.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarCmpValGreater">
+    <Position X="3.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltCmpVal\FltVarCmpValGreater.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarCmpValGreaterEqual">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltCmpVal\FltVarCmpValGreaterEqual.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarCmpValLess">
+    <Position X="8.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltCmpVal\FltVarCmpValLess.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarCmpValLessEqual">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltCmpVal\FltVarCmpValLessEqual.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarCmpValNotEqual">
+    <Position X="12.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltCmpVal\FltVarCmpValNotEqual.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

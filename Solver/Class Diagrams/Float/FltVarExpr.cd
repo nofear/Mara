@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="MaraSolver.Float.FltVarExpr">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltExpr\FltVarExpr.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAE4AWAAgAAAAAAAMAAAAAAAAAAByA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarExprAdd">
+    <Position X="1.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltExpr\FltVarExprAdd.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarExprDiv">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltExpr\FltVarExprDiv.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarExprMul">
+    <Position X="6.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltExpr\FltVarExprMul.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaraSolver.Float.FltVarExprSub">
+    <Position X="8.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Float\FltExpr\FltVarExprSub.cs</FileName>
+      <HashCode>AAQAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>
