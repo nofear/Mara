@@ -1,0 +1,8 @@
+bin
+obj
+.DS_Store
+*.suo
+*.vssscc
+*.scc
+*.vspscc
+*.user
