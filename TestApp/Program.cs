@@ -20,9 +20,6 @@ using MaraSolver.Float;
 using MaraSolver.Float.Search;
 using MaraSolver.BaseConstraint;
 
-using MaraScheduler;
-using MaraScheduler.BaseConstraint;
-
 using SolverExample;
 
 //--------------------------------------------------------------------------------
@@ -187,24 +184,7 @@ namespace TestApp
 			}
 		}
 
-		static void Scheduler1()
-		{
-			Scheduler scheduler	= new Scheduler( 0, 100 );
-			Activity act0		= new Activity( scheduler );
-			Activity act1		= new Activity( scheduler );
-			
-			act0.Duration.Value	= 10;
-			act1.Duration.Value	= 20;
-
-			PrecedenceConstraint cnst	= act1.Succeeds( act0 );
-		
-			UnaryResource rsrc		= new UnaryResource( scheduler );
-			CapResourceConstraint rc1	= act0.Requires( rsrc );
-		
-		
-		}
-
-		static void Test1()
+        static void Test1()
 		{
 			Solver solver		= new Solver( 0, 100 );
 			IntVar a			= new IntVar( solver, 0, 10 );

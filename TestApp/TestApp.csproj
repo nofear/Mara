@@ -35,7 +35,8 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -57,6 +58,7 @@
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -79,6 +81,7 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -111,16 +114,13 @@
     <Compile Include="App.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Default.cd" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Interval\Interval.csproj">
       <Project>{DAA6BB54-3ACD-46F1-82A0-51C8E2CC7EA2}</Project>
       <Name>Interval</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Scheduler\Scheduler.csproj">
-      <Project>{DBDA6905-AED5-4483-9FE9-AED28ECB0826}</Project>
-      <Name>Scheduler</Name>
     </ProjectReference>
     <ProjectReference Include="..\SolverExample\SolverExample.csproj">
       <Project>{BBAC608F-105E-41AB-B56F-29DAEA306D6C}</Project>
