@@ -40,31 +40,31 @@ namespace TestApp
 		{
 			Thread.CurrentThread.Priority	= ThreadPriority.Highest;
 
-			//Multiply();
-			//Poly1();
-			//Cover1();
-			//Scheduler1();
-			//Prop1();
-			//Generate();
-			//AppMoreMoney.MoreMoney();
-			//Thread1();
-			//Sudoku();
-			AppMagicSquare.MagicSquare();
-			//AppMagicSquare.MagicSquare();
-			//AppMagicSquare.MagicSquare2();
-			//AppMagicSquare.MagicSquare4();
-			//AppMagicSquare.MagicSquare4b();
-			//Sudoku();
-			//AppGolomb.Golomb();
-			//AppGolomb.Golomb( 10 );
-			AppGolomb.Golomb( 11 );
+            //Multiply();
+            //Poly1();
+            //Cover1();
+            //Scheduler1();
+            //Prop1();
+            //Generate();
+            //AppMoreMoney.MoreMoney();
+            //Thread1();
+            //Sudoku();
+            // AppMagicSquare.MagicSquare();
+            //AppMagicSquare.MagicSquare();
+            //AppMagicSquare.MagicSquare2();
+            //AppMagicSquare.MagicSquare4();
+            //AppMagicSquare.MagicSquare4b();
+            //Sudoku();
+            //AppGolomb.Golomb();
+            //AppGolomb.Golomb( 10 );
+            // AppGolomb.Golomb( 11 );
 
-			Console.In.ReadLine();
-			
+            AppMondriaan.Mondriaan();
+
+            Console.In.ReadLine();
 		}
 
-
-		private static void Poly1()
+        private static void Poly1()
 		{
 	
 			Random rnd	= new Random(0);

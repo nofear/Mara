@@ -24,7 +24,6 @@
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
-    <DelaySign>false</DelaySign>
     <OutputType>Exe</OutputType>
     <RootNamespace>TestApp</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
@@ -88,7 +87,6 @@
       <Name>System</Name>
     </Reference>
     <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data">
       <Name>System.Data</Name>
@@ -112,6 +110,20 @@
     <Compile Include="AppMagicSquare.cs" />
     <Compile Include="AppSudoku.cs" />
     <Compile Include="App.cs" />
+    <Compile Include="Mondriaan\AppMondriaan.cs" />
+    <Compile Include="Mondriaan\Mondriaan.cs" />
+    <Compile Include="Mondriaan\CellReduce.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mondriaan\MatrixCons.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mondriaan\AreaMatrixCons.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mondriaan\CornerLess.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -131,6 +143,9 @@
       <Name>Solver</Name>
       <Private>True</Private>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mondriaan\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
