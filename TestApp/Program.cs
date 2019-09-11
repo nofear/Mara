@@ -3,29 +3,16 @@
 //--------------------------------------------------------------------------------
 
 using System;
-using System.Timers;
-using System.IO;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Threading;
-using System.Linq;
-using System.Linq.Expressions;
 using MaraSolver;
-using MaraSolver.Utility;
 using MaraInterval.Interval;
 using MaraSolver.Integer;
-using MaraSolver.Integer.Search;
 using MaraSolver.Float;
 using MaraSolver.Float.Search;
-using MaraSolver.BaseConstraint;
-
-using SolverExample;
 
 //--------------------------------------------------------------------------------
 
-namespace TestApp
-{
+namespace TestApp {
 	/// <summary>
 	/// Holds application code
 	/// </summary>

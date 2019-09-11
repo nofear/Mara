@@ -8,13 +8,18 @@ namespace TestApp {
 		static public void Mondriaan() {
 			Thread.CurrentThread.Priority = ThreadPriority.Highest;
 
-			Mondriaan m = new Mondriaan(10);
+			Mondriaan m = new Mondriaan(4);
 			Solver solver = m.Solver;
 
 			solver.Solve(new IntGenerate(solver,
 									m.Matrix.VarList.ToArray(),
 									IntVarSelector.FirstNotBound,
 									new IntSearchInstantiate(IntVarValueSelector.Max)));
+
+
+
+
+
 
 			//solver.Out.Write( ms.Matrix.ToString() );
 			//solver.PrintInformation();

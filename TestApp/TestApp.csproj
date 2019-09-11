@@ -124,6 +124,9 @@
     <Compile Include="Mondriaan\CornerLess.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Mondriaan\MatrixTopLeftCons.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

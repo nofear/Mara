@@ -39,201 +39,166 @@
  * 
  */
 //--------------------------------------------------------------------------------
- 
+
 using System;
 using System.Text;
 
 using MaraInterval.Interval;
 
 //--------------------------------------------------------------------------------
-namespace MaraSolver.Float
-{
+namespace MaraSolver.Float {
 	/// <summary>
 	/// Summary description for FltVarMatrix.
 	/// </summary>
-	public class FltVarMatrix : SolverBase
-	{
-		public FltVarMatrix( Solver solver, int rowCount, int colCount ) :
-			this( solver, rowCount, colCount, FltInterval.Whole )
-		{
+	public class FltVarMatrix: SolverBase {
+		public FltVarMatrix(Solver solver, int rowCount, int colCount) :
+			this(solver, rowCount, colCount, FltInterval.Whole) {
 		}
 
-		public FltVarMatrix( Solver solver, int rowCount, int colCount, FltInterval interval ) :
-			this( solver, rowCount, colCount, new FltDomain( interval ) )
-		{
-		}
-	
-		public FltVarMatrix( Solver solver, int rowCount, int colCount, FltDomain domain ) :
-			base( solver )
-		{
-			m_VarList		= null;
-			m_RowCount		= rowCount;
-			m_ColCount		= colCount;
-		
-			InitMatrix( domain );
+		public FltVarMatrix(Solver solver, int rowCount, int colCount, FltInterval interval) :
+			this(solver, rowCount, colCount, new FltDomain(interval)) {
 		}
 
-		public FltVarMatrix( Solver solver, int rowCount, int colCount, FltVarList list ) :
-			base( solver )
-		{
-			m_VarList		= list;
-			m_RowCount		= rowCount;
-			m_ColCount		= colCount;
+		public FltVarMatrix(Solver solver, int rowCount, int colCount, FltDomain domain) :
+			base(solver) {
+			m_VarList = null;
+			m_RowCount = rowCount;
+			m_ColCount = colCount;
+
+			InitMatrix(domain);
 		}
 
-		public override string ToString()
-		{
-			StringBuilder str	= new StringBuilder();
-			
-			for( int row = 0; row < m_RowCount; ++row )
-			{
-				for( int col = 0; col < m_ColCount; ++col )
-				{
-					if( col > 0 )
-					{
-						str.Append( "\t" );
-					}	
+		public FltVarMatrix(Solver solver, int rowCount, int colCount, FltVarList list) :
+			base(solver) {
+			m_VarList = list;
+			m_RowCount = rowCount;
+			m_ColCount = colCount;
+		}
 
-					str.Append( Cell( row, col ).Domain.ToString() );
+		public override string ToString() {
+			StringBuilder str = new StringBuilder();
+
+			for(int row = 0; row < m_RowCount; ++row) {
+				for(int col = 0; col < m_ColCount; ++col) {
+					if(col > 0) {
+						str.Append("\t");
+					}
+
+					str.Append(Cell(row, col).Domain.ToString());
 				}
 
-				str.Append( "\n" );
+				str.Append("\n");
 			}
 
 			return str.ToString();
 		}
-		
-		public int RowCount
-		{
-			get
-			{
+
+		public int RowCount {
+			get {
 				return m_RowCount;
 			}
 		}
 
-		public int ColCount
-		{
-			get
-			{
+		public int ColCount {
+			get {
 				return m_ColCount;
 			}
 		}
 
-		public FltVarList VarList
-		{
-			get
-			{
+		public FltVarList VarList {
+			get {
 				return m_VarList;
 			}
 		}
 
-		public FltVar this[ int row, int col  ]
-		{
-			get
-			{
-				return Cell( row, col );
+		public FltVar this[int row, int col] {
+			get {
+				return Cell(row, col);
 			}
 		}
 
-		public FltVar Cell( int row, int col )
-		{
-			return m_VarList[ row * m_ColCount + col ];
+		public FltVar Cell(int row, int col) {
+			return m_VarList[row * m_ColCount + col];
 		}
 
-		public FltVarMatrix Matrix( int rowOffset, int colOffset, int rowCount, int colCount )
-		{
-			FltVarList list	= new FltVarList( m_Solver );
-						
-			for( int row = 0; row < rowCount; ++row )
-			{
-				for( int col = 0; col < colCount; ++col )
-				{
-					list.Add( Cell( rowOffset + row, colOffset + col ) );
+		public FltVarMatrix Matrix(int rowOffset, int colOffset, int rowCount, int colCount) {
+			FltVarList list = new FltVarList(Solver);
+
+			for(int row = 0; row < rowCount; ++row) {
+				for(int col = 0; col < colCount; ++col) {
+					list.Add(Cell(rowOffset + row, colOffset + col));
 				}
 			}
-			
-			return new FltVarMatrix( m_Solver, rowCount, colCount, list );
+
+			return new FltVarMatrix(Solver, rowCount, colCount, list);
 		}
 
-		public FltVarList DiagLeftTopToBottomRight()
-		{
-			FltVarList list	= new FltVarList( m_Solver );
+		public FltVarList DiagLeftTopToBottomRight() {
+			FltVarList list = new FltVarList(Solver);
 
-			if( m_RowCount == m_ColCount )
-			{
-				int size	= m_RowCount;
+			if(m_RowCount == m_ColCount) {
+				int size = m_RowCount;
 
-				for( int idx = 0; idx < size; ++idx )
-				{
-					list.Add( Cell( idx, idx ) );
+				for(int idx = 0; idx < size; ++idx) {
+					list.Add(Cell(idx, idx));
 				}
 			}
-			
+
 			return list;
 		}
 
-		public FltVarList DiagRightTopToBottomLeft()
-		{
-			FltVarList list	= new FltVarList( m_Solver );
+		public FltVarList DiagRightTopToBottomLeft() {
+			FltVarList list = new FltVarList(Solver);
 
-			if( m_RowCount == m_ColCount )
-			{
-				int size	= m_RowCount;
+			if(m_RowCount == m_ColCount) {
+				int size = m_RowCount;
 
-				for( int idx = 0; idx < size; ++idx )
-				{
-					list.Add( Cell( idx, ( size - 1 ) - idx ) );
+				for(int idx = 0; idx < size; ++idx) {
+					list.Add(Cell(idx, (size - 1) - idx));
 				}
 			}
-			
+
 			return list;
 		}
 
-		public FltVarList Row( int vrow )
-		{
-			FltVarList list	= new FltVarList( m_Solver );
+		public FltVarList Row(int vrow) {
+			FltVarList list = new FltVarList(Solver);
 
-			for( int col = 0; col < m_ColCount; ++col )
-			{
-				list.Add( Cell( vrow, col ) );
+			for(int col = 0; col < m_ColCount; ++col) {
+				list.Add(Cell(vrow, col));
 			}
-			
+
 			return list;
 		}
 
-		public FltVarList Col( int vcol )
-		{
-			FltVarList list	= new FltVarList( m_Solver );
+		public FltVarList Col(int vcol) {
+			FltVarList list = new FltVarList(Solver);
 
-			for( int row = 0; row < m_RowCount; ++row )
-			{
-				list.Add( Cell( row, vcol ) );
+			for(int row = 0; row < m_RowCount; ++row) {
+				list.Add(Cell(row, vcol));
 			}
-			
+
 			return list;
 		}
-		
 
-		private void InitMatrix( FltDomain domain )
-		{
-			m_VarList	= new FltVarList( m_Solver, m_RowCount * m_ColCount );
 
-			for( int row = 0; row < m_RowCount; ++row )
-			{
-				for( int col = 0; col < m_ColCount; ++col )
-				{
-					string name		= row.ToString() + "." + col.ToString();
+		private void InitMatrix(FltDomain domain) {
+			m_VarList = new FltVarList(Solver, m_RowCount * m_ColCount);
 
-					FltVar cell		= new FltVar( m_Solver, domain, name );
-										
-					m_VarList.Add( cell );
+			for(int row = 0; row < m_RowCount; ++row) {
+				for(int col = 0; col < m_ColCount; ++col) {
+					string name = row.ToString() + "." + col.ToString();
+
+					FltVar cell = new FltVar(Solver, domain, name);
+
+					m_VarList.Add(cell);
 				}
 			}
-		}	
-		
-		FltVarList		m_VarList;
-		int				m_RowCount;
-		int				m_ColCount;
+		}
+
+		FltVarList m_VarList;
+		int m_RowCount;
+		int m_ColCount;
 	}
 }
 

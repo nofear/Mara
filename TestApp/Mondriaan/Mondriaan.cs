@@ -38,6 +38,9 @@ namespace TestApp {
 				}
 			}
 
+			RectangleList.Sort((lhs, rhs) => lhs.Area.CompareTo(rhs.Area));
+
+
 			int max = RectangleList.Count - 1;
 			IntInterval range = new IntInterval(0, max);
 
@@ -48,11 +51,12 @@ namespace TestApp {
 			Area = new IntVar(Solver, 0, objective.Value, "area difference");
 			Matrix = new IntVarMatrix(Solver, size, size, range);
 
-			Solver.Add(new CornerLess(this, 0, 0, 0, size - 1));
-			Solver.Add(new CornerLess(this, 0, size - 1, size - 1, size - 1));
-			Solver.Add(new CornerLess(this, size - 1, size - 1, size - 1, 0));
+			//Solver.Add(new CornerLess(this, 0, 0, 0, size - 1));
+			//Solver.Add(new CornerLess(this, 0, size - 1, size - 1, size - 1));
+			//Solver.Add(new CornerLess(this, size - 1, size - 1, size - 1, 0));
 
-			Solver.Add(new AreaMatrixCons(this));
+			// Solver.Add(new AreaMatrixCons(this));
+			// Solver.Add(new MatrixTopLeftCons(this));
 			Solver.Add(new MatrixCons(this));
 
 			for(int row = 0; row < size; row++) {
@@ -146,6 +150,14 @@ namespace TestApp {
 		}
 
 	}
+
+
+
+
+
+
+
+
 }
 
 //--------------------------------------------------------------------------------
