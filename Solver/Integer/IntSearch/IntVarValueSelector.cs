@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------
-// Copyright © 2004-2007 Patrick de Boer
+// Copyright Â© 2004-2007 Patrick de Boer
 //--------------------------------------------------------------------------------
 /* $Log: /Solver/Solver/Integer/IntSearch/IntVarValueSelector.cs $
  * 
