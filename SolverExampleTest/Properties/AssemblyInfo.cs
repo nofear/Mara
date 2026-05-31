@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle( "SolverExampleTest" )]
 [assembly: AssemblyDescription( "" )]
 [assembly: AssemblyConfiguration( "" )]
-[assembly: AssemblyCompany( "Cube" )]
+[assembly: AssemblyCompany( "Patrick de Boer" )]
 [assembly: AssemblyProduct( "SolverExampleTest" )]
-[assembly: AssemblyCopyright( "Copyright © Cube 2007" )]
+[assembly: AssemblyCopyright( "Copyright © 2004-2026 Patrick de Boer. Licensed under the Apache License, Version 2.0." )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 
