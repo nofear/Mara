@@ -55,44 +55,34 @@ namespace MaraInterval.Utility
 
 		private static double Diff( double val, Int64 diff )
 		{
-			double r	= val;
+			Int64 x	= BitConverter.DoubleToInt64Bits( val );
+			if( x < 0 )
+				x	= ~( (Int64) 1 << 63 ) - x;
 
-			unsafe
-			{
-				Int64 x	= * (Int64*) &r;
-				if( x < 0 )
-					x	= ~( (Int64) 1 << 63 ) - x;
+			x	+= diff;
 
-				x	+= diff;
-				
-				if( x < 0 )
-					x	= ~( (Int64) 1 << 63 ) - x;
+			if( x < 0 )
+				x	= ~( (Int64) 1 << 63 ) - x;
 
-				r      = * (double*) &x;
-			}
-
-			return r;
+			return BitConverter.Int64BitsToDouble( x );
 		}
 
 		public static bool Equal( double x, double y )
 		{
 			if( x == y )
 				return true;
-		
-			unsafe
-			{
-				Int64 xInt	= * (Int64*) &x;
-				if( xInt < 0 )
-					xInt = ~( (Int64) 1 << 63 ) - xInt;
 
-				Int64 yInt	= * (Int64*) &y;
-				if( yInt < 0 )
-					yInt = ~( (Int64) 1 << 63 ) - yInt;
+			Int64 xInt	= BitConverter.DoubleToInt64Bits( x );
+			if( xInt < 0 )
+				xInt = ~( (Int64) 1 << 63 ) - xInt;
 
-				Int64 diff	= Math.Abs( xInt - yInt );
-				
-				return diff <= m_Value;
-			}
+			Int64 yInt	= BitConverter.DoubleToInt64Bits( y );
+			if( yInt < 0 )
+				yInt = ~( (Int64) 1 << 63 ) - yInt;
+
+			Int64 diff	= Math.Abs( xInt - yInt );
+
+			return diff <= m_Value;
 		}
 
 		public static bool NotEqual( double x, double y )

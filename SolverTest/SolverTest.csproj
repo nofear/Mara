@@ -3,7 +3,6 @@
     <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>SolverTest</RootNamespace>
     <AssemblyName>SolverTest</AssemblyName>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <IsPackable>false</IsPackable>
     <Nullable>disable</Nullable>

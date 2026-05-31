@@ -3,7 +3,6 @@
     <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>MaraSolver</RootNamespace>
     <AssemblyName>Solver</AssemblyName>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Nullable>disable</Nullable>
     <LangVersion>latest</LangVersion>

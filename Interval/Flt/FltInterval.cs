@@ -545,19 +545,13 @@ namespace MaraInterval.Interval
 
 		private static double RandomVal( double max )
 		{
-			double x;
-			unsafe
-			{
-				int mexp	= (int) ( Math.Log(max)/Math.Log(2)/2 );
-			
-				Int64 exp	= (1<<10) + m_Random.Next( -mexp, mexp );
-				Int64 mant	= Math.BigMul( m_Random.Next(), m_Random.Next() ) % ~(1L<<52);
-				Int64 num	= (exp<<52|mant);
-				
-				x	= * (double*) &num;
-			}
+			int mexp	= (int) ( Math.Log(max)/Math.Log(2)/2 );
 
-			return x;
+			Int64 exp	= (1<<10) + m_Random.Next( -mexp, mexp );
+			Int64 mant	= Math.BigMul( m_Random.Next(), m_Random.Next() ) % ~(1L<<52);
+			Int64 num	= (exp<<52|mant);
+
+			return BitConverter.Int64BitsToDouble( num );
 		}
 
 		#endregion

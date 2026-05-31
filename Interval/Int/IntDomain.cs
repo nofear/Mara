@@ -263,7 +263,7 @@ namespace MaraInterval.Interval
 			int srcOffset1		= offset - m_Offset;
 			int srcOffset2		= offset - domain.m_Offset;
 
-			return CompareRange( m_BitArray, srcOffset1, domain.m_BitArray, srcOffset2, len );
+			return m_BitArray.AsSpan( srcOffset1, len ).SequenceEqual( domain.m_BitArray.AsSpan( srcOffset2, len ) );
 		}
 
 		public override int GetHashCode()
@@ -312,19 +312,10 @@ namespace MaraInterval.Interval
 			
 				int card	= 0;
 
-				unsafe
+				foreach( UInt32 word in m_BitArray )
 				{
-					fixed( UInt32* pSrc = m_BitArray )
-					{
-						UInt32* src = pSrc;
-						int length	= m_BitArray.Length;
-
-						for( int idx = 0; idx < length; ++idx )
-						{
-							card	+= Binary.BitCount( *src++ );
-						}
-					}
-				}			
+					card	+= Binary.BitCount( word );
+				}
 
 				return card;
 			}
@@ -429,7 +420,7 @@ namespace MaraInterval.Interval
 					int len1	= ToLength( diff );
 					int offset1	= ToOffset( diff.Min );
 				
-					CopyRange( m_BitArray, offset1 - m_Offset, bitArray, offset1 - offset, len1 );
+					m_BitArray.AsSpan( offset1 - m_Offset, len1 ).CopyTo( bitArray.AsSpan( offset1 - offset, len1 ) );
 				}
 				
 				result.m_BitArray	= bitArray;
@@ -487,7 +478,7 @@ namespace MaraInterval.Interval
 					{
 						len		= offset.Min - domainOffset.Min;
 
-						CopyRange( domain.m_BitArray, srcOffset2, bitArray, dstOffset, len );
+						domain.m_BitArray.AsSpan( srcOffset2, len ).CopyTo( bitArray.AsSpan( dstOffset, len ) );
 
 						dstOffset		+= len;
 						srcOffset2		+= len;
@@ -497,7 +488,7 @@ namespace MaraInterval.Interval
 					{
 						len		= domainOffset.Min - offset.Min;
 
-						CopyRange( m_BitArray, srcOffset1, bitArray, dstOffset, len );
+						m_BitArray.AsSpan( srcOffset1, len ).CopyTo( bitArray.AsSpan( dstOffset, len ) );
 
 						dstOffset		+= len;
 						srcOffset1		+= len;
@@ -512,7 +503,7 @@ namespace MaraInterval.Interval
 
 				len		= offsetMax - offsetMin + 1;
 				
-				bitArrayChanged		|= UnionRange( m_BitArray, srcOffset1, domain.m_BitArray, srcOffset2, bitArray, dstOffset, len );
+				bitArrayChanged		|= UnionRange( m_BitArray.AsSpan( srcOffset1, len ), domain.m_BitArray.AsSpan( srcOffset2, len ), bitArray.AsSpan( dstOffset, len ) );
 
 				dstOffset		+= len;
 				srcOffset1		+= len;
@@ -525,7 +516,7 @@ namespace MaraInterval.Interval
 					{
 						len		= domainOffset.Max - offset.Max;
 
-						CopyRange( domain.m_BitArray, srcOffset2, bitArray, dstOffset, len );
+						domain.m_BitArray.AsSpan( srcOffset2, len ).CopyTo( bitArray.AsSpan( dstOffset, len ) );
 
 						dstOffset		+= len;
 						srcOffset2		+= len;
@@ -535,7 +526,7 @@ namespace MaraInterval.Interval
 					{
 						len		= offset.Max - domainOffset.Max;
 
-						CopyRange( m_BitArray, srcOffset1, bitArray, dstOffset, len );
+						m_BitArray.AsSpan( srcOffset1, len ).CopyTo( bitArray.AsSpan( dstOffset, len ) );
 
 						dstOffset		+= len;
 						srcOffset1		+= len;
@@ -551,16 +542,16 @@ namespace MaraInterval.Interval
 				{
 					int idx		=  offset.Min - domainOffset.Min;
 					
-					CopyRange( m_BitArray, 0, bitArray, idx, m_BitArray.Length );	
-					CopyRange( domain.m_BitArray, 0, bitArray, 0, domain.m_BitArray.Length );	
+					m_BitArray.AsSpan( 0, m_BitArray.Length ).CopyTo( bitArray.AsSpan( idx, m_BitArray.Length ) );	
+					domain.m_BitArray.AsSpan( 0, domain.m_BitArray.Length ).CopyTo( bitArray.AsSpan( 0, domain.m_BitArray.Length ) );	
 				}
 				// 6
 				else if( domainOffset.Min > offset.Max )
 				{
 					int idx		= domainOffset.Min - offset.Min;
 					
-					CopyRange( m_BitArray, 0, bitArray, 0, m_BitArray.Length );	
-					CopyRange( domain.m_BitArray, 0, bitArray, idx, domain.m_BitArray.Length );	
+					m_BitArray.AsSpan( 0, m_BitArray.Length ).CopyTo( bitArray.AsSpan( 0, m_BitArray.Length ) );	
+					domain.m_BitArray.AsSpan( 0, domain.m_BitArray.Length ).CopyTo( bitArray.AsSpan( idx, domain.m_BitArray.Length ) );	
 				}
 				
 				bitArrayChanged		= true;
@@ -616,7 +607,7 @@ namespace MaraInterval.Interval
 
 				UInt32[] bitArray	= new UInt32[ m_BitArray.Length ];
 
-				CopyRange( m_BitArray, 0, bitArray, 0, m_BitArray.Length );
+				m_BitArray.AsSpan( 0, m_BitArray.Length ).CopyTo( bitArray.AsSpan( 0, m_BitArray.Length ) );
 			
 				result.m_BitArray	= bitArray;
 				result.m_Offset		= m_Offset;
@@ -692,7 +683,7 @@ namespace MaraInterval.Interval
 					{
 						int len		= offsetMax2 - offsetMin1 + 1;
 					
-						CopyRange( m_BitArray, offsetMin1 - m_Offset, bitArray, 0, len );
+						m_BitArray.AsSpan( offsetMin1 - m_Offset, len ).CopyTo( bitArray.AsSpan( 0, len ) );
 
 						bitArray[ offsetMax1 - offsetMin1 ]		&= ~( ~mask1 & ~mask2 );
 					}
@@ -701,8 +692,8 @@ namespace MaraInterval.Interval
 						int len1		= offsetMax1 - offsetMin1 + 1;
 						int len2		= offsetMax2 - offsetMin2 + 1;
 
-						CopyRange( m_BitArray, offsetMin1 - m_Offset, bitArray, 0, len1 );
-						CopyRange( m_BitArray, offsetMin2 - m_Offset, bitArray, offsetMin2 - offsetMin1, len2 );
+						m_BitArray.AsSpan( offsetMin1 - m_Offset, len1 ).CopyTo( bitArray.AsSpan( 0, len1 ) );
+						m_BitArray.AsSpan( offsetMin2 - m_Offset, len2 ).CopyTo( bitArray.AsSpan( offsetMin2 - offsetMin1, len2 ) );
 						
 						bitArray[ offsetMax1 - offsetMin1 ]		&= mask1;
 						bitArray[ offsetMin2 - offsetMin1 ]		&= mask2;
@@ -713,7 +704,7 @@ namespace MaraInterval.Interval
 					int len		= bitArray.Length;
 					int offset	= ToOffset( intv.Min );
 				
-					CopyRange( m_BitArray, offset - m_Offset, bitArray, 0, len );
+					m_BitArray.AsSpan( offset - m_Offset, len ).CopyTo( bitArray.AsSpan( 0, len ) );
 
 					if( interval.Min <= m_Interval.Min
 								&& interval.Max < m_Interval.Max )
@@ -791,7 +782,7 @@ namespace MaraInterval.Interval
 				{
 					len		= domainOffset.Min - offset.Min;
 
-					CopyRange( m_BitArray, srcOffset1, bitArray, dstOffset, len );
+					m_BitArray.AsSpan( srcOffset1, len ).CopyTo( bitArray.AsSpan( dstOffset, len ) );
 
 					dstOffset		+= len;
 					srcOffset1		+= len;
@@ -804,7 +795,7 @@ namespace MaraInterval.Interval
 
 			len		= offsetMax - offsetMin + 1;
 			
-			bitArrayChanged		|= DifferenceRange( m_BitArray, srcOffset1, domain.m_BitArray, srcOffset2, bitArray, dstOffset, len );
+			bitArrayChanged		|= DifferenceRange( m_BitArray.AsSpan( srcOffset1, len ), domain.m_BitArray.AsSpan( srcOffset2, len ), bitArray.AsSpan( dstOffset, len ) );
 
 			dstOffset		+= len;
 			srcOffset1		+= len;
@@ -822,7 +813,7 @@ namespace MaraInterval.Interval
 				{
 					len		= offset.Max - domainOffset.Max;
 
-					CopyRange( m_BitArray, srcOffset1, bitArray, dstOffset, len );
+					m_BitArray.AsSpan( srcOffset1, len ).CopyTo( bitArray.AsSpan( dstOffset, len ) );
 
 					dstOffset		+= len;
 					srcOffset1		+= len;
@@ -888,7 +879,7 @@ namespace MaraInterval.Interval
 				int offset		= ToOffset( intv.Min );
 				int srcOffset	= offset - m_Offset;
 				
-				CopyRange( m_BitArray, srcOffset, bitArray, 0, len );
+				m_BitArray.AsSpan( srcOffset, len ).CopyTo( bitArray.AsSpan( 0, len ) );
 
 				bitArray[ 0 ]		&= ToMaskBegin( intv.Min );
 				bitArray[ len - 1 ]	&= ToMaskEnd( intv.Max );
@@ -964,7 +955,7 @@ namespace MaraInterval.Interval
 
 			int len		= offsetMax - offsetMin + 1;
 			
-			bitArrayChanged		|= IntersectRange( m_BitArray, srcOffset1, domain.m_BitArray, srcOffset2, bitArray, dstOffset, len );
+			bitArrayChanged		|= IntersectRange( m_BitArray.AsSpan( srcOffset1, len ), domain.m_BitArray.AsSpan( srcOffset2, len ), bitArray.AsSpan( dstOffset, len ) );
 
 			dstOffset		+= len;
 			srcOffset1		+= len;
@@ -1075,7 +1066,7 @@ namespace MaraInterval.Interval
 
 			int len		= offsetMax - offsetMin + 1;
 			
-			intersects		|= IntersectsWithRange( m_BitArray, srcOffset1, domain.m_BitArray, srcOffset2, len );
+			intersects		|= IntersectsWithRange( m_BitArray.AsSpan( srcOffset1, len ), domain.m_BitArray.AsSpan( srcOffset2, len ) );
 
 			if( offset.Max != domainOffset.Max )
 			{
@@ -1200,172 +1191,54 @@ namespace MaraInterval.Interval
 			m_BitArray[ offset ]	|= mask;
 		}
 
-		static bool CompareRange( UInt32[] srcBitArray1, int srcOffset1,
-									 UInt32[] srcBitArray2, int srcOffset2,
-									 int length )
-		{
-			bool equal	= true;
-
-			unsafe
-			{
-				fixed( UInt32* pSrc1 = srcBitArray1, pSrc2 = srcBitArray2 )
-				{
-					UInt32* src1 = pSrc1 + srcOffset1;
-					UInt32* src2 = pSrc2 + srcOffset2;
-
-					int idx	= 0;
-					while( idx < length && ( *src1++ == *src2++ ) )
-					{
-						++idx;
-					}
-					
-					equal	= ( idx == length );
-				}
-			}
-			
-			return equal;
-		}
-
-		static void CopyRange( UInt32[] srcBitArray, int srcOffset,
-								 UInt32[] dstBitArray, int dstOffset,
-								 int length )
-		{
-			if( srcOffset + length > srcBitArray.Length
-					|| dstOffset + length > dstBitArray.Length )
-				throw new ArgumentOutOfRangeException();
-		
-			unsafe
-			{
-				fixed( UInt32* pSrc = srcBitArray, pDst = dstBitArray )
-				{
-					UInt32* src		= pSrc + srcOffset;
-					UInt32* dst		= pDst + dstOffset;
-
-					for( int idx = 0; idx < length; ++idx )
-					{
-						*dst++	= *src++;
-					}
-				}
-			}
-		}
-		
-		static bool UnionRange( UInt32[] srcBitArray1, int srcOffset1,
-								UInt32[] srcBitArray2, int srcOffset2,
-								UInt32[] dstBitArray, int dstOffset,
-								int length )
+		static bool UnionRange( ReadOnlySpan<uint> src1, ReadOnlySpan<uint> src2, Span<uint> dst )
 		{
 			bool changed	= false;
 
-			unsafe
+			for( int idx = 0; idx < src1.Length; ++idx )
 			{
-				fixed( UInt32* pSrc1 = srcBitArray1, pSrc2 = srcBitArray2, pDst = dstBitArray )
-				{
-					UInt32* src1	= pSrc1 + srcOffset1;
-					UInt32* src2	= pSrc2 + srcOffset2;
-					UInt32* dst		= pDst + dstOffset;
-
-					for( int idx = 0; idx < length; ++idx )
-					{
-						*dst		= *src1 | *src2;
-						
-						changed		|= *src1 != *dst;
-						
-						++src1;
-						++src2;
-						++dst;
-					}
-				}
+				dst[ idx ]	= src1[ idx ] | src2[ idx ];
+				changed		|= src1[ idx ] != dst[ idx ];
 			}
 
 			return changed;
 		}
 
-		static bool DifferenceRange( UInt32[] srcBitArray1, int srcOffset1,
-										UInt32[] srcBitArray2, int srcOffset2,
-										UInt32[] dstBitArray, int dstOffset,
-										int length )
+		static bool DifferenceRange( ReadOnlySpan<uint> src1, ReadOnlySpan<uint> src2, Span<uint> dst )
 		{
 			bool changed	= false;
 
-			unsafe
+			for( int idx = 0; idx < src1.Length; ++idx )
 			{
-				fixed( UInt32* pSrc1 = srcBitArray1, pSrc2 = srcBitArray2, pDst = dstBitArray )
-				{
-					UInt32* src1	= pSrc1 + srcOffset1;
-					UInt32* src2	= pSrc2 + srcOffset2;
-					UInt32* dst		= pDst + dstOffset;
-
-					for( int idx = 0; idx < length; ++idx )
-					{
-						*dst		= *src1 & ~*src2;
-						
-						changed		|= *src1 != *dst;
-						
-						++src1;
-						++src2;
-						++dst;
-					}
-				}
+				dst[ idx ]	= src1[ idx ] & ~src2[ idx ];
+				changed		|= src1[ idx ] != dst[ idx ];
 			}
-			
+
 			return changed;
 		}
 
-		static bool IntersectRange( UInt32[] srcBitArray1, int srcOffset1,
-										UInt32[] srcBitArray2, int srcOffset2,
-										UInt32[] dstBitArray, int dstOffset,
-										int length )
+		static bool IntersectRange( ReadOnlySpan<uint> src1, ReadOnlySpan<uint> src2, Span<uint> dst )
 		{
 			bool changed	= false;
 
-			unsafe
+			for( int idx = 0; idx < src1.Length; ++idx )
 			{
-				fixed( UInt32* pSrc1 = srcBitArray1, pSrc2 = srcBitArray2, pDst = dstBitArray )
-				{
-					UInt32* src1	= pSrc1 + srcOffset1;
-					UInt32* src2	= pSrc2 + srcOffset2;
-					UInt32* dst		= pDst + dstOffset;
-
-					for( int idx = 0; idx < length; ++idx )
-					{
-						*dst		= *src1 & *src2;
-						
-						changed		|= *src1 != *dst;
-						
-						++src1;
-						++src2;
-						++dst;
-					}
-				}
+				dst[ idx ]	= src1[ idx ] & src2[ idx ];
+				changed		|= src1[ idx ] != dst[ idx ];
 			}
-			
+
 			return changed;
 		}
 
-		static bool IntersectsWithRange( UInt32[] srcBitArray1, int srcOffset1,
-										UInt32[] srcBitArray2, int srcOffset2,
-										int length )
+		static bool IntersectsWithRange( ReadOnlySpan<uint> src1, ReadOnlySpan<uint> src2 )
 		{
-			bool intersects	= false;
-
-			unsafe
+			for( int idx = 0; idx < src1.Length; ++idx )
 			{
-				fixed( UInt32* pSrc1 = srcBitArray1, pSrc2 = srcBitArray2 )
-				{
-					UInt32* src1	= pSrc1 + srcOffset1;
-					UInt32* src2	= pSrc2 + srcOffset2;
-
-					for( int idx = 0; idx < length && !intersects; ++idx )
-					{
-						UInt32 s1	= *src1++;
-						UInt32 s2	= *src2++;
-
-						intersects	|= ( s1 & s2 ) != 0;
-					}
-				}
+				if( ( src1[ idx ] & src2[ idx ] ) != 0 )
+					return true;
 			}
-			
-			return intersects;
+
+			return false;
 		}
 
 		// 11111111.11110000
